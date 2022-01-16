@@ -9,7 +9,9 @@ module.exports = {
 
     addUser: async (request,response)=>{
         var user = {};
+        
         try{
+            request.body.password = await bcrypt.hash(request.body.password, 10);
             user = await User.addUser(request.body);
         }catch(e){
             console.log('e', e);
