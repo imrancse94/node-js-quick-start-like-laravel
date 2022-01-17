@@ -1,6 +1,6 @@
 const _ = require('lodash');
 var Validator = require("validatorjs");
-const { app_status_code } = require('../../constant');
+const { app_status_code } = require('../../config/constant');
 
 module.exports = (request, response, next, rules) => {
 

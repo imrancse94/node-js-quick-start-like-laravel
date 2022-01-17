@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 module.exports = {
 
     senApiResponse:(response,status_code,message,data)=>{
@@ -19,5 +21,16 @@ module.exports = {
                         message:message,
                         errors:data
                     });
+    },
+    getSystemCurrentDateTime(format = 'YYYY-MM-DD'){
+        return moment().format(format);
+    },
+    setDateTimeFormat(date,format = 'YYYY-MM-DD'){
+        return moment(date).format(format);
+    },
+    setInfoLog(data){
+        const logger = require('./../../config/log');
+        // data = JSON.stringify(data)
+        logger.info(data)
     }
 }

@@ -1,6 +1,6 @@
 const _ = require('lodash');
 var Validator = require("validatorjs");
-const { app_status_code } = require('../../constant');
+const { app_status_code } = require('../../config/constant');
 
 module.exports = (request, response, next, rules) => {
 
@@ -24,22 +24,22 @@ module.exports = (request, response, next, rules) => {
     // }
 
     //console.log('value', id);
+    var modelData = {};
 
     try {
       const schema = require(`./../Schema/${collection_name}`);
-      const model = new schema();
       var filter = {};
       filter[field_name] = value;
 
       if (id) {
         var mongoose = require('mongoose');
         if (mongoose.Types.ObjectId.isValid(id)) {
-
+          modelData = await schema.where(filter).where('_id').ne(id);
         }
-        filter['_id'] = { $ne: mongoose.Types.ObjectId(id) };
+      }else{
+        modelData = await schema.where(filter);
       }
-      //console.log('filter', filter);
-      const modelData = await schema.find(filter);
+
       //console.log('modelData', modelData.length);
       if (modelData.length > 0) {
         passes(false, `${field_name} already exists`);
