@@ -2,7 +2,7 @@ const moment = require('moment');
 
 module.exports = {
 
-    senApiResponse:(response,status_code,message,data)=>{
+    sendApiResponse:(response,status_code,message,data)=>{
         return response
                     .set('Content-Type', 'application/json')
                     .status(200)
@@ -12,7 +12,7 @@ module.exports = {
                         data:data
                     });
     },
-    senApiErrorResponse:(response,status_code,message,data)=>{
+    sendApiErrorResponse:(response,status_code,message,data)=>{
         return response
                     .set('Content-Type', 'application/json')
                     .status(200)

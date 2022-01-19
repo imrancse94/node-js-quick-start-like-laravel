@@ -2,9 +2,9 @@
 global.AppHelper = require('../app/Utils/Helper'); 
 
 // sendResponse global function 
-global.senApiResponse = AppHelper.senApiResponse; 
+global.sendApiResponse = AppHelper.sendApiResponse; 
 
-global.senApiErrorResponse = AppHelper.senApiErrorResponse;
+global.sendApiErrorResponse = AppHelper.sendApiErrorResponse;
 
 global.getSystemCurrentDateTime = AppHelper.getSystemCurrentDateTime; 
 

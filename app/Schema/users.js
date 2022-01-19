@@ -25,8 +25,6 @@ const schema = mongoose.Schema({
 	created_at: {
 		type: Date
 	}
-})
+},{ versionKey: false })
 
-const model = mongoose.model("User", schema);
-
-module.exports = model;
+module.exports = mongoose.model("User", schema);

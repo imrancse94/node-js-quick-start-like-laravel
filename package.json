@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "db:seed":"node ./seeder/seeder.js"
   },
   "dependencies": {
     "Validator": "^1.1.4",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "cookie-parser": "~1.4.4",
+    "db-migrate": "^0.11.13",
     "debug": "~2.6.9",
     "dotenv": "^11.0.0",
     "express": "~4.16.1",

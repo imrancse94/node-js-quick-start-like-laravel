@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 module.exports = {
     getUserList: async (request,response)=>{
         const user = await User.getAllusers();
-        return senApiResponse(response,app_status_code.success,"Login Successfully",user)
+        return sendApiResponse(response,app_status_code.success,"Login Successfully",user)
     },
 
     addUser: async (request,response)=>{
@@ -17,6 +17,6 @@ module.exports = {
             console.log('e', e);
         }
         
-        return senApiResponse(response,app_status_code.success,"User Added Successfully",user)
+        return sendApiResponse(response,app_status_code.success,"User Added Successfully",user)
     }
 }
