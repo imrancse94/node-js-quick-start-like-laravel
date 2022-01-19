@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon app.js",
-    "db:seed":"node ./seeder/seeder.js"
+    "db:seed": "node ./seeder/seeder.js"
   },
   "dependencies": {
     "Validator": "^1.1.4",
@@ -17,6 +17,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "mongodb": "^4.3.0",

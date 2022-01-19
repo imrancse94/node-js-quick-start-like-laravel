@@ -58,6 +58,6 @@ module.exports = (request, response, next, rules) => {
   validation.checkAsync(() => {
     next();
   }, () => {
-    return senApiErrorResponse(response, app_status_code.validation_error, "Validation Error", validation.errors.all());
+    return sendApiErrorResponse(response, app_status_code.validation_error, "Validation Error", validation.errors.all());
   });
 }

@@ -37,5 +37,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//console.log('secret',require('crypto').randomBytes(64).toString('hex'))
 app.listen(3001);
 module.exports = app;
