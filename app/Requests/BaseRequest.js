@@ -2,7 +2,7 @@ const _ = require('lodash');
 var Validator = require("validatorjs");
 const { app_status_code } = require('../../config/constant');
 
-module.exports = (request, response, next, rules) => {
+module.exports = (request, response, next, rules,c_messages = {}) => {
 
   Validator.registerAsync('unique', async function (value, attribute, req, passes) {
 
@@ -27,7 +27,7 @@ module.exports = (request, response, next, rules) => {
     var modelData = {};
 
     try {
-      const schema = require(`./../Schema/${collection_name}`);
+      const schema = require(`./../Models/${collection_name}`);
       var filter = {};
       filter[field_name] = value;
 
@@ -53,8 +53,8 @@ module.exports = (request, response, next, rules) => {
     passes();
   });
 
-  var validation = new Validator(request.body, rules);
-
+  var validation = new Validator(request.body, rules,c_messages);
+console.log('c_messages',c_messages);
   validation.checkAsync(() => {
     next();
   }, () => {

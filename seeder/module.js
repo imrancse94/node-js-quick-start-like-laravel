@@ -1,6 +1,6 @@
 module.exports = async () => {
-    const moduleSchema = require('./../app/Schema/modules');
-    await moduleSchema.create({
+    const moduleSchema = require('./../app/Models/modules');
+    return await moduleSchema.create({
         name: "Access Control",
         children: [
             {

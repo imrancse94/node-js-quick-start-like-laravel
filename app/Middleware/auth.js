@@ -14,8 +14,7 @@ const verifyToken = (req, res, next) => {
         return sendApiErrorResponse(res,app_status_code.token_required,"A token is required for authentication",{});
     }
     try {
-      const decoded = jwt.verify(token, JWT_SECRET);
-      //req.user = decoded;
+      req.user = jwt.verify(token, JWT_SECRET);
     } catch (err) {
       return sendApiErrorResponse(res,app_status_code.validation_error,"Unauthenticate Token",{}); 
     }

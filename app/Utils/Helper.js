@@ -13,6 +13,10 @@ module.exports = {
                     });
     },
     sendApiErrorResponse:(response,status_code,message,data)=>{
+        // if(data){
+        //     data = JSON.parse(JSON.stringify(data));
+        // }
+        
         return response
                     .set('Content-Type', 'application/json')
                     .status(200)

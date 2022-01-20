@@ -3,10 +3,10 @@ const router = express.Router();
 
 const LoginRequest = require('../app/Requests/LoginRequest');
 
-router.use(LoginRequest);
+//router.use(LoginRequest);
 
 const LoginController = require('../app/Controller/LoginController');
 
-router.post('/login', LoginController.login);
+router.post('/login',LoginRequest, LoginController.login);
 
 module.exports = router;
