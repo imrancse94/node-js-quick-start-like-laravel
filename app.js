@@ -44,5 +44,7 @@ app.use(function(err, req, res, next) {
 });
 
 //console.log('secret',require('crypto').randomBytes(64).toString('hex'))
-app.listen(3001);
+app.listen(process.env.DB_PORT || 3000, function(){
+  console.log('Server started on port '+process.env.DB_PORT || 3000);
+});
 module.exports = app;
