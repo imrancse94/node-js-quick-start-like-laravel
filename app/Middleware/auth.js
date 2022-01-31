@@ -16,7 +16,7 @@ const verifyToken = (req, res, next) => {
     try {
       req.user = jwt.verify(token, JWT_SECRET);
     } catch (err) {
-      return sendApiErrorResponse(res,app_status_code.validation_error,"Unauthenticate Token",{}); 
+      return sendApiErrorResponse(res,app_status_code.validation_error,"Unauthenticate Token",{error:err.message}); 
     }
     return next();
   };
