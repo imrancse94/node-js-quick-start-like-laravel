@@ -7,6 +7,10 @@ if(process.env.DB_USERNAME && process.env.DB_PASSWORD) {
 }
 connectionString += `${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
 
+if(process.env.DB_URI) {
+  connectionString = process.env.DB_URI;
+}
+
 const client = mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true
