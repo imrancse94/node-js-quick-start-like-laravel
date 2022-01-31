@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("./model");
 
 const schema = mongoose.Schema({
 	parent_id: {

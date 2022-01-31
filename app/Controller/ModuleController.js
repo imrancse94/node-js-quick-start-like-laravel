@@ -2,7 +2,7 @@ const moduleService = require('./../Services/ModuleService');
 
 module.exports = {
 
-    list: async (request,response)=>{
+    getlist: async (request,response)=>{
         const data =  await moduleService.getAllModules();
         return sendApiResponse(response,app_status_code.success,"Module List",data)
     },
@@ -18,5 +18,9 @@ module.exports = {
     delete: async (request,response)=>{
         const data =  await moduleService.delete(request.params.id);
         return sendApiResponse(response,app_status_code.success,"Module Deleted",data)
+    },
+    get: async (request,response)=>{
+        const data =  await moduleService.get(request.params.id);
+        return sendApiResponse(response,app_status_code.success,"Module Fetched",data)
     }
 }

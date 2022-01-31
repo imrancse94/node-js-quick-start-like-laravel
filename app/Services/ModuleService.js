@@ -2,8 +2,14 @@ const moduleSchema = require('../Models/modules');
 
 module.exports = {
     getAllModules: async () => {
-        const modules = await moduleSchema.find({},'-__v');
-        return modules;
+        try {
+            const modules = await moduleSchema.find({},'-__v');
+            return modules;
+        } catch (error) {
+            console.log(error.message);
+            return error
+        }
+        
     },
     add: async (data) => {
         try {

@@ -1,4 +1,4 @@
 module.exports = {
-    '/': require('./publicroute'),
-    '/auth': require('./protectedroute')
+    '/auth': require('./protectedroute'),
+    '/': require('./publicroute')
 }

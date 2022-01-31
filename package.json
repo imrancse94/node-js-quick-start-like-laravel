@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
-    "db:seed": "node ./seeder/seeder.js"
+    "start": "node app.js",
+    "db:seed": "node ./seeder/seeder.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "Validator": "^1.1.4",
@@ -25,5 +26,8 @@
     "morgan": "~1.9.1",
     "validatorjs": "^3.22.1",
     "winston": "^3.4.0"
+  },
+  "engines": {
+    "node": "14.18.0"
   }
 }

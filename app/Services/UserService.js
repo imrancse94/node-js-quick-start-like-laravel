@@ -11,7 +11,9 @@ module.exports = {
     },
     async addUser(inputData) {
         inputData.password = await bcrypt.hash(inputData.password, saltRounds);
-        return await schema.create(inputData);
+        var response = await schema.create(inputData);
+        delete response['password'];
+        return response;
     },
     async getTokeByCredentials(email, password) {
         var data = {}
