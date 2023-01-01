@@ -1,9 +1,9 @@
-const moduleSchema = require('../Models/modules');
+const module = require('../Models/modules');
 
 module.exports = {
     getAllModules: async () => {
         try {
-            const modules = await moduleSchema.find({},'-__v');
+            const modules = await module.find({},'-__v');
             return modules;
         } catch (error) {
             console.log(error.message);
@@ -13,7 +13,7 @@ module.exports = {
     },
     add: async (data) => {
         try {
-            const module = await moduleSchema.create(data);
+            const module = await module.create(data);
             return module;
         } catch (error) {
             return error.message;
@@ -22,7 +22,7 @@ module.exports = {
     },
     edit: async (id,data) => {
         try {
-            const module = await moduleSchema.findByIdAndUpdate(id,data,{new: true});
+            const module = await module.findByIdAndUpdate(id,data);
             return module;            
         } catch (error) {
             return error.message;
@@ -30,7 +30,7 @@ module.exports = {
     },
     delete: async (id) => {
         try {
-            const module = await moduleSchema.findByIdAndRemove(id);
+            const module = await module.findByIdAndRemove(id);
             return module;            
         } catch (error) {
             return error.message;

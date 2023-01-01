@@ -1,5 +1,6 @@
 const moduleService = require('./../Services/ModuleService');
 
+
 module.exports = {
 
     getlist: async (request,response)=>{
@@ -12,8 +13,9 @@ module.exports = {
         return sendApiResponse(response,app_status_code.success,"Module Added",data)
     },
     edit: async (request,response)=>{
-        const data =  await moduleService.edit(request.params.id,request.body);
-        return sendApiResponse(response,app_status_code.success,"Module Edited",data)
+        const data = await moduleService.edit(request.params.id, request.body);
+        console.log('ssss',data)
+        sendApiResponse(response, app_status_code.success, "Module Edited", data)
     },
     delete: async (request,response)=>{
         const data =  await moduleService.delete(request.params.id);

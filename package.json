@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "db:seed": "node ./seeder/seeder.js",
     "dev": "nodemon app.js"
   },

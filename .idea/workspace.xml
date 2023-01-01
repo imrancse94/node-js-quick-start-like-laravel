@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b2ff669-16dc-48b4-b167-e406d47fb028" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Validation/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/ModuleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/ModuleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/BaseRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/BaseRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ModuleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModuleService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1672515773" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JSd8d0qKKU5lc4NYi76SCnSHWZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/express",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.1.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b2ff669-16dc-48b4-b167-e406d47fb028" name="Changes" comment="" />
+      <created>1672075260071</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672075260071</updated>
+      <workItem from="1672075261209" duration="687000" />
+      <workItem from="1672121100536" duration="1239000" />
+      <workItem from="1672249512632" duration="5457000" />
+      <workItem from="1672304962862" duration="319000" />
+      <workItem from="1672336046077" duration="2348000" />
+      <workItem from="1672390032496" duration="1198000" />
+      <workItem from="1672421571460" duration="17000" />
+      <workItem from="1672509420267" duration="2988000" />
+      <workItem from="1672540362551" duration="7064000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
