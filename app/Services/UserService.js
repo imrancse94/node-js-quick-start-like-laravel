@@ -1,4 +1,4 @@
-const schema = require('./../Models/users');
+const UserModel = require('./../Models/users');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const saltRounds = 10;
@@ -7,17 +7,17 @@ require('dotenv').config()
 module.exports = {
 
     getAllusers() {
-        return schema.find({}, { password: 0 });
+        return UserModel.find();
     },
     async addUser(inputData) {
         inputData.password = await bcrypt.hash(inputData.password, saltRounds);
-        var response = await schema.create(inputData);
+        var response = await UserModel.create(inputData);
         delete response['password'];
         return response;
     },
     async getTokeByCredentials(email, password) {
         var data = {}
-        data = await schema.findOne({ email: email },{usergroup_ids:0});
+        data = await UserModel.findOne({ email: email },{usergroup_ids:0,parent_id:0});
         if (data && await bcrypt.compare(password, data.password)) {
             data = JSON.parse(JSON.stringify(data));
             delete data.password;

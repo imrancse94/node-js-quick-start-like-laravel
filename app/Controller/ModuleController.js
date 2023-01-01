@@ -4,8 +4,8 @@ const moduleService = require('./../Services/ModuleService');
 module.exports = {
 
     getlist: async (request,response)=>{
-        const data =  await moduleService.getAllModules();
-        return sendApiResponse(response,app_status_code.success,"Module List",data)
+        const module =  await moduleService.getAllModules();
+        return sendApiResponse(response,module.status_code,module.message,module.data)
     },
 
     add: async (request,response)=>{

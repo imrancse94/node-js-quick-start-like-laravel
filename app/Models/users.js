@@ -1,8 +1,8 @@
-const mongoose = require("./model");
+const userSchema = require("./model");
 
-const schema = mongoose.Schema({
+module.exports = userSchema("User",{
 	parent_id: {
-		type: mongoose.Schema.Types.ObjectId,
+		type: 'ObjectId',
 		default: null
 	},
 	email:{
@@ -27,6 +27,4 @@ const schema = mongoose.Schema({
 	created_at: {
 		type: Date
 	}
-},{ versionKey: false })
-
-module.exports = mongoose.model("User", schema);
+})

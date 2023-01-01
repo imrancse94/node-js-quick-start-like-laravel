@@ -5,8 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var lodash = require('lodash');
 
-require('./config/database');
 require('./config/global');
+require('./config/database');
+
 
 
 var app = express();

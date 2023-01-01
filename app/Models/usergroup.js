@@ -1,6 +1,6 @@
-const mongoose = require("./model");
+const usergroupSchema = require("./model");
 
-const schema = mongoose.Schema({
+module.exports = usergroupSchema("Usergroup",{
 	name:{
 		type:String,
 		required:true
@@ -15,6 +15,4 @@ const schema = mongoose.Schema({
 	created_at: {
 		type: Date
 	}
-},{ versionKey: false })
-
-module.exports = mongoose.model("Usergroup", schema);
+})

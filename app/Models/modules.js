@@ -1,6 +1,6 @@
-const mongoose = require("./model");
+const moduleSchema = require("./model");
 
-const model = mongoose.model("Module", mongoose.Schema({
+module.exports = moduleSchema("Module",{
     name: {
         type: String,
         required: true
@@ -15,13 +15,4 @@ const model = mongoose.model("Module", mongoose.Schema({
     created_at: {
         type: Date
     }
-}, {versionKey: false}));
-
-module.exports = {
-    findByIdAndUpdate: async (id, data) => {
-        return await model.findByIdAndUpdate(id, data, {new: true})
-    },
-	find: async () =>{
-		return await module.find({},'-__v')
-	}
-};
+});
