@@ -6,12 +6,45 @@ require('dotenv').config()
 
 module.exports = {
 
-    getAllusers() {
-        return UserModel.find();
+    getAllusers: async () => {
+
+        let result = {
+            status_code: app_status_code.not_found,
+            message: 'No data found',
+            data: {}
+        };
+
+        try{
+
+          const users = await UserModel.find();
+
+          if(users.length > 0){
+              result = {
+                  status_code: app_status_code.success,
+                  message: 'User get successfully',
+                  data: users
+              };
+          }
+
+        }catch (err){
+            result.message = err.message
+        }
+
+        return result;
     },
     async addUser(inputData) {
         inputData.password = await bcrypt.hash(inputData.password, saltRounds);
         var response = await UserModel.create(inputData);
+        console.log('response',response)
+        delete response['password'];
+        return response;
+    },
+    async editUser(id,inputData) {
+        console.log('response',response)
+        return;
+        inputData.password = await bcrypt.hash(inputData.password, saltRounds);
+        var response = await UserModel.findByIdAndUpdate(id,inputData);
+
         delete response['password'];
         return response;
     },

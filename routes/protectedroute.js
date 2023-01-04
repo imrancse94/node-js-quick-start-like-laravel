@@ -9,11 +9,11 @@ const ModuleController = require('../app/Controller/ModuleController');
 const UserRequest = require('../app/Requests/UserRequest');
 const ModuleRequest = require('../app/Requests/ModuleRequest');
 
-
+// prefix => auth
 router.get('/userlist',UserController.getUserList);
 
 
-router.post('/add/user',UserRequest, UserController.addUser);
+router.put('/user/edit/:id',UserRequest, UserController.editUser);
 
 router.get('/module/list', ModuleController.getlist);
 router.post('/add/module',ModuleRequest, ModuleController.add);

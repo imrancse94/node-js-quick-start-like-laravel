@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 module.exports = (model_name, fields) => {
     
-
     for(let key in fields){
         if(fields[key].type === 'ObjectId'){
             fields[key].type = mongoose.Schema.Types.ObjectId
@@ -14,10 +13,10 @@ module.exports = (model_name, fields) => {
         findByIdAndUpdate: async (id, data) => {
             return await model.findByIdAndUpdate(id, data, {new: true})
         },
-        find: async (obj = {},hideColumns = {}) => {
+        find: (obj = {},hideColumns = {}) => {
             hideColumns['password'] = 0
             hideColumns['_id'] = 0
-            return await model.find(obj, hideColumns).exec();
+            return model.find(obj, hideColumns).exec();
         },
         create: async (data) => {
             return await model.create(data);

@@ -28,14 +28,13 @@ Validator.registerAsync('unique', async function (value, attribute, req, passes)
         filter[field_name] = value;
 
         if (id) {
-            var mongoose = require('mongoose');
-            if (mongoose.Types.ObjectId.isValid(id)) {
-                modelData = await schema.where(filter).where('_id').ne(id);
-            }
+            filter['_id'] = {
+                $ne:id
+            };
         }else{
-            modelData = await schema.where(filter);
-        }
 
+        }
+        modelData = await schema.find(filter);
         //console.log('modelData', modelData.length);
         if (modelData.length > 0) {
             passes(false, `${field_name} already exists`);

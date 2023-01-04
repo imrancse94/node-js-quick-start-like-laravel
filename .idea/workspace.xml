@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b2ff669-16dc-48b4-b167-e406d47fb028" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controller/ModuleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/ModuleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controller/UsergroupController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/UsergroupController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/UserController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/roles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/usergroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/usergroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ModuleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModuleService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/UserRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/UserRequest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utils/Helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Validation/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Validation/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/protectedroute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/protectedroute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/publicroute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/publicroute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,21 +65,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/express&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.1.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "14.18.0",
+    "javascript.nodejs.core.library.typings.version": "14.18.0",
+    "last_opened_file_path": "C:/express",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.1.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -98,7 +100,14 @@
       <workItem from="1672509420267" duration="2988000" />
       <workItem from="1672540362551" duration="7241000" />
       <workItem from="1672580780268" duration="7436000" />
-      <workItem from="1672594224877" duration="656000" />
+      <workItem from="1672594224877" duration="1268000" />
+      <workItem from="1672651465658" duration="1299000" />
+      <workItem from="1672679590770" duration="4433000" />
+      <workItem from="1672685359298" duration="402000" />
+      <workItem from="1672729308082" duration="1192000" />
+      <workItem from="1672768348400" duration="1971000" />
+      <workItem from="1672823329522" duration="210000" />
+      <workItem from="1672855833465" duration="3183000" />
     </task>
     <servers />
   </component>

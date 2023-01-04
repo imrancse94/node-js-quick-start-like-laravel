@@ -9,4 +9,7 @@ const LoginController = require('../app/Controller/LoginController');
 
 router.post('/login',LoginRequest, LoginController.login);
 
+router.get('/',(req, res)=>{
+    sendApiResponse(res,app_status_code.success,"Welcome to our app",{})
+});
 module.exports = router;

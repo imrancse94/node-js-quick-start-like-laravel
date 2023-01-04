@@ -5,12 +5,24 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var lodash = require('lodash');
 
+
 require('./config/global');
 require('./config/database');
 
 
 
 var app = express();
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+
+var credentials = {}
+
+if(process.env.SSL_CERTIFICATE_KEY_PATH && process.env.SSL_PRIVATE_KEY_PATH) {
+  var privateKey = fs.readFileSync(process.env.SSL_PRIVATE_KEY_PATH, 'utf8');
+  var certificate = fs.readFileSync(process.env.SSL_CERTIFICATE_KEY_PATH, 'utf8');
+  credentials = {key: privateKey, cert: certificate};
+}
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -44,8 +56,17 @@ app.use(function(err, req, res, next) {
   
 });
 
-//console.log('secret',require('crypto').randomBytes(64).toString('hex'))
-app.listen(process.env.PORT || 3000, function(){
+var httpServer = http.createServer(app);
+
+httpServer.listen(process.env.PORT || 3000, function(){
   console.log(`Server started on port ${process.env.PORT || 3000}`);
 });
+console.log('dddd',!lodash.isEmpty(credentials))
+if(!lodash.isEmpty(credentials)) {
+  var httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(process.env.PORT || 8080, function(){
+    console.log(`Server started on port ${process.env.PORT || 8080}`);
+  });
+}
+
 module.exports = app;

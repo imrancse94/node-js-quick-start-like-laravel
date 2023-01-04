@@ -1,3 +1,5 @@
 node_modules
 logs
 .env
+/ssl/laragon.crt
+/ssl/laragon.key
